@@ -19,9 +19,9 @@ export const prod = webpackMerge(common, {
    * Where assets will be placed
    */
   output: {
-    path: root('../','dist'),
+    path: root('../'),
     publicPath: '/',
-    filename: '[name].[hash].js',
+    filename: 'dist/[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
   },
 
@@ -46,7 +46,7 @@ export const prod = webpackMerge(common, {
     /**
      * create css chuck with the general styles
      */
-    new ExtractTextPlugin('assets/stylesheets/[name].[hash].css'),
+    new ExtractTextPlugin('dist/assets/stylesheets/[name].[hash].css'),
     /**
      * minify CSS code
      */
