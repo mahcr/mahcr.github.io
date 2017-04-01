@@ -8,11 +8,19 @@ h4 {
 h1,
 .h1 {
   font-size: 2rem;
+
+  @include breakpoint-xs {
+    font-size: 1.7rem;
+  }
 }
 
 h2,
 .h2 {
   font-size: 1.5rem;
+
+  @include breakpoint-xs {
+    font-size: 1.2rem;
+  }
 }
 
 p,
@@ -22,6 +30,6 @@ p,
 }
 
 body {
-  font-size:62.5%;
   font-family: 'Raleway', sans-serif;
+  font-size: 62.5%;
 }

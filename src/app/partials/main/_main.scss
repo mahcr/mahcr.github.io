@@ -4,10 +4,11 @@
   justify-content: center;
   height: 100vh;
   margin: 0 auto;
-  max-width: 100rem;
+  max-width: 50rem;
   padding: 0 3rem;
 
   @include breakpoint-xs {
+    align-items: inherit;
     flex-wrap: wrap;
   }
 }

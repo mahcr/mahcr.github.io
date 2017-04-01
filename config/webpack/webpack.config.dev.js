@@ -11,7 +11,7 @@ export const dev = webpackMerge(common, {
 
   output: {
     path: root('dist'),
-    publicPath: 'http://localhost:8080/',
+    publicPath: '/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },

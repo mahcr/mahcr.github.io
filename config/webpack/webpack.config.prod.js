@@ -46,7 +46,7 @@ export const prod = webpackMerge(common, {
     /**
      * create css chuck with the general styles
      */
-    new ExtractTextPlugin('dist/assets/stylesheets/[name].[hash].css'),
+    new ExtractTextPlugin('dist/assets/stylesheets/main.[hash].css'),
     /**
      * minify CSS code
      */

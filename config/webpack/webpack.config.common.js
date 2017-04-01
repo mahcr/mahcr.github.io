@@ -39,7 +39,7 @@ export const common = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|ico)$/,
-        use: 'file-loader?name=assets/fonts/[name].[hash].[ext]'
+        use: 'file-loader?name=src/app/assets/imgs/[name].[ext]&publicPath=assets/imgs/&outputPath=dist/assets/imgs/'
       },
       {
         test: /\.js$/,
@@ -59,14 +59,6 @@ export const common = {
   },
 
   plugins: [
-    /**
-     * find shared dependecies and remove them from left to right
-     * if app -> share dependecies with vendor they will be removed from app
-     * */
-    new CommonsChunkPlugin({
-      name: 'common',
-      chunks: ['vendors', 'home']
-    }),
     new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin(data),
     // jQuery, Tether

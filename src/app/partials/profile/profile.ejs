@@ -5,16 +5,53 @@
   <h2><%= data.jobTitle %></h2>
 
   <p class="description">
-    <%= data.description %>
+    <%- data.description %>
   </p>
 
-  <div class="svg-container">
-    <svg role="img" class="icon-same-size"><use xlink:href="#icon-html"/></svg>
-    <svg role="img" class="icon-same-size"><use xlink:href="#icon-css"/></svg>
-    <svg role="img"><use xlink:href="#icon-js"/></svg>
-    <svg role="img"><use xlink:href="#icon-angular"/></svg>
-    <svg role="img"><use xlink:href="#icon-ionic"/></svg>
-    <span>...</span>
-  </div>
+  <ul class="svg-container">
+    <li>
+      <svg role="img" class="icon-same-size"><use xlink:href="#icon-html"/></svg>
+    </li>
+
+    <li>
+      <svg role="img" class="icon-same-size"><use xlink:href="#icon-css"/></svg>
+    </li>
+
+    <li>
+      <svg role="img"><use xlink:href="#icon-js"/></svg>
+    </li>
+
+    <li>
+      <svg role="img"><use xlink:href="#icon-angular"/></svg>
+    </li>
+
+    <li>
+      <svg role="img"><use xlink:href="#icon-ionic"/></svg>
+    </li>
+
+    <li class="col item-and-more">
+      <span>and more...</span>
+    </li>
+  </ul>
+
+  <footer class="social-footer">
+
+    <strong>Find me:</strong>
+
+    <ul class="social-list">
+      <li>
+        <a href="<%= data.social.linkedin %>" target="_blank">
+          <svg role="img"><use xlink:href="#icon-linkedin"/></svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="<%= data.social.mail %>" target="_blank">
+          <svg role="img"><use xlink:href="#icon-mail"/></svg>
+        </a>
+      </li>
+    </ul>
+
+  </footer>
 
 </section>
