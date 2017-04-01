@@ -1,6 +1,10 @@
 .#{$prefix}-m-profile {
   width: 50%;
 
+  @include breakpoint-xs {
+    width: 100%;
+  }
+
   .description {
     font-size: 0.85rem;
     line-height: 1.4;
