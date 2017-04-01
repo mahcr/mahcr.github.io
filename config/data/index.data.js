@@ -1,5 +1,6 @@
 export default {
   template: '!!ejs-compiled-loader!src/index.ejs',
+  minify: { collapseWhitespace: true, removeComments:true, minifyCSS: true, minifyJS: true },
   prefix: 'cv',
   head: {
     title: 'Mariano Alvarez | FE Dev',
