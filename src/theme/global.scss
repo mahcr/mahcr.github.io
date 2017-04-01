@@ -1,0 +1,23 @@
+// --------------------------------------------------
+// Most of the imports should be place here
+// --------------------------------------------------
+
+// third-parties
+@import 'node_modules/normalize-scss/sass/normalize/import-now';
+
+// variables
+@import './core/variables';
+
+// helpers
+@import './helpers/utils';
+
+// core
+@import './core/font';
+@import './core/icons';
+@import './core/layout';
+@import './core/typo';
+
+// partials
+@import '../app/partials/main/main';
+@import '../app/partials/profile/profile';
+@import '../app/partials/thumbnail/thumbnail';

@@ -1,0 +1,40 @@
+$corner-radius: 0.4rem;
+
+.#{$prefix}-m-thumbnail {
+  padding-right: 2rem;
+  width: 50%;
+
+  img {
+    border-radius: $corner-radius;
+    display: block;
+    width: 100%;
+  }
+
+  figure {
+    margin-left: 0;
+    position: relative;
+
+    &:hover {
+      figcaption {
+        color: $color-white;
+        height: 100%;
+      }
+    }
+  }
+
+  figcaption {
+    align-items: center;
+    background-color: rgba(0,0,0, .4);
+    bottom: 0;
+    border-radius: $corner-radius;
+    color: transparent;
+    display: flex;
+    font-size: 1.8rem;
+    height: 0;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    transition: height 1s ease, color 2s ease;
+    text-align: center;
+  }
+}

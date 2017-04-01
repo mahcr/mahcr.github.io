@@ -1,0 +1,21 @@
+<% const data = htmlWebpackPlugin.options; %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <% include src/app/partials/head/head %>
+
+  </head>
+  <body>
+
+    <div style="height: 0; width: 0; position: absolute; top: 0; visibility: hidden; display: none;">
+      <% include src/app/partials/svgs/svgs %>
+    </div>
+
+    <% include src/app/partials/main/main %>
+
+    <% include src/app/partials/scripts/scripts %>
+
+  </body>
+</html>
