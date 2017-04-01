@@ -1,6 +1,5 @@
 node_modules/
 .vscode/
 npm-debug.log
-dist/
 /config/env/
 
