@@ -47,6 +47,7 @@
     "raw-loader": "^0.5.1",
     "resolve-url-loader": "^1.6.1",
     "rimraf": "^2.5.2",
+    "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "svg-sprite-generator": "0.0.7",
