@@ -4,7 +4,6 @@ import { getEntries, root }           from '../scripts/helpers';
 import CommonsChunkPlugin from 'webpack/lib/optimize/CommonsChunkPlugin';
 import ExtractTextPlugin  from 'extract-text-webpack-plugin';
 import LoaderOptionsPlugin        from 'webpack/lib/NoErrorsPlugin';
-import HotModuleReplacementPlugin from 'webpack/lib/HotModuleReplacementPlugin';
 import HtmlWebpackPlugin    from 'html-webpack-plugin';
 import ProvidePlugin        from 'webpack/lib/ProvidePlugin';
 
@@ -14,7 +13,7 @@ export const common = {
   context: root('..' ,'src/'),
   // js pages
   entry: {
-    vendors: './vendors.js'
+    app: './app.js'
   },
 
   output: {
@@ -39,7 +38,7 @@ export const common = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|ico)$/,
-        use: 'file-loader?name=src/app/assets/imgs/[name].[ext]&publicPath=assets/imgs/&outputPath=dist/assets/imgs/'
+        use: 'file-loader?name=assets/fonts/[name].[hash].[ext]'
       },
       {
         test: /\.js$/,
@@ -59,16 +58,7 @@ export const common = {
   },
 
   plugins: [
-    new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin(data),
-    // jQuery, Tether
-    new ProvidePlugin({
-        jQuery: 'jquery',
-        $: 'jquery',
-        jquery: 'jquery',
-        'Tether': 'tether',
-        'window.Tether': 'tether'
-    })
   ]
 
 };
