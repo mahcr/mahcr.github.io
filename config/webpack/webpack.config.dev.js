@@ -2,10 +2,15 @@
 
 import { common }      from './';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HotModuleReplacementPlugin from 'webpack/lib/HotModuleReplacementPlugin';
 import { root }           from '../scripts/helpers';
 import webpackMerge      from 'webpack-merge';
 
 export const dev = webpackMerge(common, {
+
+  entry: {
+    dev: './dev.js'
+  },
 
   devtool: 'cheap-module-eval-source-map',
 
@@ -30,6 +35,7 @@ export const dev = webpackMerge(common, {
   },
 
   plugins: [
+    new HotModuleReplacementPlugin(),
     /**
      * create file
      */
